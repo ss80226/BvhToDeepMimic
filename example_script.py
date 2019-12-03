@@ -18,8 +18,8 @@ def removeAllFilesInDirectory(directory):
 
 # Initialization
 # ===========================================================================
-mypath = "./inputBvh/"
-dirnames = ["./OutputMimic/", mypath]
+mypath = "./Others1/"
+dirnames = ["./Others/", mypath]
 for dirname in dirnames:
     if not os.path.exists(dirname):
         os.makedirs(dirname)
@@ -39,13 +39,13 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 # for all files to convert
 for j in range(0, len(onlyfiles)):
 
-    outputPath = f"./OutputMimic/{onlyfiles[j]}.txt"
+    outputPath = f"./Others/{onlyfiles[j]}.txt"
 
     # list containing all the frames
     frames = []
 
     # open file to convert
-    inputPath = "./inputBvh/" + onlyfiles[j]
+    inputPath = "./Others1/" + onlyfiles[j]
 
     # Convert file
     converter = BvhConverter("./Settings/settings.json")
